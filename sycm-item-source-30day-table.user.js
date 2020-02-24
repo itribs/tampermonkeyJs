@@ -103,7 +103,7 @@
                     let field = tableHeaders[key];
                     switch(field) {
                         case 'date':
-                            item[key] = moment(endDate).add(-(len-i), 'day').format('YYYY-MM-DD');
+                            item[key] = moment(endDate).add(-(len-i-1), 'day').format('YYYY-MM-DD');
                             break;
                         case 'payAmt3':
                             item[key] = (getLastDataSum(resultData['payAmt'], i, 3) / 3).toFixed(0);
