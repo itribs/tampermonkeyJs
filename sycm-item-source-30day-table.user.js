@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         生意参谋最近30日数据
 // @namespace    http://it.ribs.com/
-// @version      0.1.1
+// @version      0.1.2
 // @description  生意参谋最近30日数据
 // @author       Ribs
 // @updateURL    https://github.com/itribs/tampermonkeyJs/raw/master/sycm-item-source-30day-table.user.js
@@ -159,7 +159,7 @@
             sorting: true,
             data: data,
             fields: [
-                { name: "日期", type: "text", width: 80 },
+                { name: "日期", type: "date", width: 80 },
                 { name: "访客数", type: "number", width: 60 },
                 { name: "收藏人数", type: "number", width: 70 },
                 { name: "加购人数", type: "number", width: 70 },
@@ -168,12 +168,12 @@
                 { name: "支付金额", type: "number", width: 70 },
                 { name: "近3天坑产", type: "number", width: 80 },
                 { name: "近7天坑产", type: "number", width: 80 },
-                { name: "转化率", type: "number", width: 60 },
-                { name: "近3天转化率", type: "number", width: 90 },
-                { name: "近7天转化率", type: "number", width: 90 },
-                { name: "收藏加购率", type: "number", width: 80 },
-                { name: "近3天收藏加购率", type: "number", width: 100 },
-                { name: "近7天收藏加购率", type: "number", width: 100 }
+                { name: "转化率", type: "text", width: 60 },
+                { name: "近3天转化率", type: "text", width: 90 },
+                { name: "近7天转化率", type: "text", width: 90 },
+                { name: "收藏加购率", type: "text", width: 80 },
+                { name: "近3天收藏加购率", type: "text", width: 100 },
+                { name: "近7天收藏加购率", type: "text", width: 100 }
             ]
         });
     }
