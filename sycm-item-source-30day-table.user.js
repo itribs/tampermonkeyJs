@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         生意参谋最近30日数据
 // @namespace    http://it.ribs.com/
-// @version      0.1
+// @version      0.1.1
 // @description  生意参谋最近30日数据
 // @author       Ribs
 // @updateURL    https://ribs.coding.net/p/tampermonkeyJs/d/tampermonkeyJs/git/raw/master/sycm-item-source-30day-table.user.js
@@ -246,7 +246,9 @@
         $(document).on('click', '.source-detail-trend', function() {
             let parent = $('.sycm-flow-item-source-modal');
             let downlink = parent.find('.item-source-dialog-download');
-            tableShowing = tableContaier.css('display') != 'none';
+            
+          	tableContaier.hide();
+			tableShowing = false;
 
             if (flowItemTableLink.parent().length <= 0) {
                 downlink.parent().append(flowItemTableLink);
