@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         生意参谋最近30日数据
 // @namespace    http://it.ribs.com/
-// @version      0.1.2
+// @version      0.1.3
 // @description  生意参谋最近30日数据
 // @author       Ribs
 // @updateURL    https://github.com/itribs/tampermonkeyJs/raw/master/sycm-item-source-30day-table.user.js
@@ -103,7 +103,7 @@
                     let field = tableHeaders[key];
                     switch(field) {
                         case 'date':
-                            item[key] = moment(endDate).add(-i, 'day').format('YYYY-MM-DD');
+                            item[key] = moment(endDate).add(-(len-i), 'day').format('YYYY-MM-DD');
                             break;
                         case 'payAmt3':
                             item[key] = (getLastDataSum(resultData['payAmt'], i, 3) / 3).toFixed(0);
