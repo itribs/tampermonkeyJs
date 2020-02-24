@@ -4,8 +4,8 @@
 // @version      0.1
 // @description  生意参谋选择数据字段!
 // @author       Ribs
-// @updateURL    https://ribs.coding.net/p/tampermonkeyJs/d/tampermonkeyJs/git/raw/master/sycm-item-source-fieldAutoSelected.user.js
-// @downloadURL  https://ribs.coding.net/p/tampermonkeyJs/d/tampermonkeyJs/git/raw/master/sycm-item-source-fieldAutoSelected.user.js
+// @updateURL    https://github.com/itribs/tampermonkeyJs/raw/master/sycm-item-source-fieldAutoSelected.user.js
+// @downloadURL  https://github.com/itribs/tampermonkeyJs/raw/master/sycm-item-source-fieldAutoSelected.user.js
 // @match        https://sycm.taobao.com/flow/monitor/itemsource*
 // @run-at       document-end
 // @grant        none
