@@ -4,8 +4,8 @@
 // @version      0.1.1
 // @description  生意参谋最近30日数据
 // @author       Ribs
-// @updateURL    https://ribs.coding.net/p/tampermonkeyJs/d/tampermonkeyJs/git/raw/master/sycm-item-source-30day-table.user.js
-// @downloadURL  https://ribs.coding.net/p/tampermonkeyJs/d/tampermonkeyJs/git/raw/master/sycm-item-source-30day-table.user.js
+// @updateURL    https://github.com/itribs/tampermonkeyJs/raw/master/sycm-item-source-30day-table.user.js
+// @downloadURL  https://github.com/itribs/tampermonkeyJs/raw/master/sycm-item-source-30day-table.user.js
 // @match        https://sycm.taobao.com/flow/monitor/itemsource*
 // @require      https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js
 // @require      https://code.jquery.com/jquery-3.4.1.min.js
