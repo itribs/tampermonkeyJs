@@ -5,7 +5,7 @@
 // @author       Ribs
 // @updateURL    https://github.com/itribs/tampermonkeyJs/raw/master/alibaba-get-calculate-freight.user.js
 // @downloadURL  https://github.com/itribs/tampermonkeyJs/raw/master/alibaba-get-calculate-freight.user.js
-// @match        *://*/*
+// @match        *://*.1688.com/*
 // @run-at       document-end
 // @grant        GM_registerMenuCommand
 // @grant        unsafeWindow
