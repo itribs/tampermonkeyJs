@@ -14,6 +14,8 @@
 (function () {
     'use strict';
 
+    let excludeTags = ['汽车测评', '美妆教程', '妆容展示', '护肤保养', '美妆测评种草', '穿搭', '街拍', '造型', '日常宠物', '特别宠物', '宠物周边', '歌曲演唱', '乐器演奏', '音乐教学', '音乐其他', '真人出镜', '游戏实况', '游戏剧情', '游戏解说', '游戏资讯', '汽车测评', '汽车知识', '汽车周边', '美妆测评', '3C数码测评', '汽车测评', '3C数码', '家居电器', '家装设计', '装修知识', '影视娱乐', '传统金融', '互联网金融', '财经知识'];
+
     GM_registerMenuCommand('开始获取', async function () {
         let el = document.querySelector('#xtcj_box');
         if (!el) {
@@ -89,6 +91,17 @@
 
                 index++;
                 loadingProgress(parseInt(index / totalCount * 100), user.nick_name);
+
+                let skip = false;
+                for (let key in user.tags_relation) {
+                    if (excludeTags.indexOf(user.tags_relation[key]) > -1) {
+                        skip = true;
+                        break;
+                    }
+                }
+                if (skip) {
+                    break;
+                }
 
                 let userData = await getUserData(user);
                 datas.push(userData);
