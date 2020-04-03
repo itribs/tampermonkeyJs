@@ -62,6 +62,7 @@
 
         let uri = getURI(url);
         uri.params['limit'] = 30;
+        uri.params['page'] = uri.params['limit'] * 1;
 
         let datas = [];
         let totalCount = -1;
@@ -80,6 +81,7 @@
             }
 
             if (userDatas.data.data.authors.length <= 0) {
+                alert('没有数据了~，' + uri.getFullUrl());
                 break;
             } else {
                 uri.params['page'] += 1;
@@ -105,6 +107,7 @@
                 if (userData) {
                     datas.push(userData)
                 } else {
+                    alert('获取不到了~，' + uri.getFullUrl() + '，' + user.nick_name);
                     break outerWhile;
                 }
 
