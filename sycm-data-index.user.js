@@ -272,14 +272,18 @@ function request(opts) {
 
 function getImageData(img) {
     let canvas = document.createElement("canvas");
-    canvas.width = Math.max(img.width, 15);
-    canvas.height = Math.max(img.height, 15);
+    canvas.width = img.width * 1.5;
+    canvas.height = img.height * 1.5;
     let ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0, img.width, img.height);
+    ctx.fillStyle="#ffffff";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     let dataURL = '';
     try {
         dataURL = canvas.toDataURL("image/png");
-    } catch (e) {}
+    } catch (e) {
+        console.log(e);
+    }
     return dataURL;
 }
 
@@ -287,7 +291,7 @@ async function getImageText(img) {
     let imageData = getImageData(img).replace('data:image/png;base64,', '');
     let value = await ocrRequest(encodeURIComponent(imageData));
     let ms = value.match(/\d/g);
-    value = ms.join('');
+    value = (ms || []).join('');
     return value;
 }
 
